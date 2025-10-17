@@ -1,0 +1,21 @@
+import math
+
+def expression(a):
+    z = (math.sqrt(2) / 2) * math.sin(a / 2)
+    return z
+
+def amoeba(n):
+    hours_per_division = 3
+    divisions = n // hours_per_division
+    count = 1 * (2 ** divisions)
+    return count
+
+a = float(input("Введіть значення a (у радіанах): "))
+print("Значення виразу z = ", expression(a))
+
+n = int(input("Введіть кількість годин n: "))
+
+while n < 0:
+    n = int(input("Кількість годин не може бути від’ємною! Введіть ще раз кількість годин n: "))
+
+print("Кількість амеб через n годин = ", amoeba(n))
