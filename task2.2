@@ -1,0 +1,22 @@
+def amoeba(n):
+    hours_per_division = 3
+    divisions = n // hours_per_division
+    count = 1 * (2 ** divisions)
+    return count
+
+import math
+from mod import amoeba  
+
+def expression(a):
+    z = (math.sqrt(2) / 2) * math.sin(a / 2)
+    return z
+
+a = float(input("Enter value a (in radians): "))
+print("Value of expression z = ", expression(a))
+
+n = int(input("Enter number of hours n: "))
+
+while n < 0:
+    n = int(input("Number of hours cannot be negative! Enter again number of hours n: "))
+
+print("Number of amoebas after n hours = ", amoeba(n))
